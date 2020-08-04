@@ -22,13 +22,8 @@ if __name__ == '__main__':
     # print('colors:', colors)
 
     raw_predict = identify_num.identify_numbers(gray_images)
-    # raw_predict = np.reshape(raw_predict, (8, 8))
     # print('raw_predict', raw_predict)
-    print("----------")
-    for each in raw_predict:
-        print(each, end=' ')
-    # for each in O0OO000OOO0O0O000:
-    #     print(each[1], end=' ')
+
     numbers = correction.get_number_and_correct(raw_predict, colors)
     # print('numbers: ', numbers)
 
@@ -36,6 +31,11 @@ if __name__ == '__main__':
     color_dict = [Fore.RED, Fore.GREEN, Fore.BLUE]
     ans_list = [numbers[i] + 10 * (colors[i] + 1) for i in range(64)]
 
+    # print("----------")
+    # for each in raw_predict:
+    #     print(each, end=' ')
+    # for each in O0OO000OOO0O0O000:
+    #     print(each[1], end=' ')
     # for i in range(8):
     #     for j in range(8):
     #         # print(str(numbers[i * 8 + j]) + color_dict[colors[i * 8 + j]], end=', ')
@@ -43,8 +43,8 @@ if __name__ == '__main__':
     #     print()
     # print(Style.RESET_ALL)
     # print('Below is for other programs')
-    # for x in ans_list:
-    #     print(x, end=' ')
-    # print()
+    for x in ans_list:
+        print(x, end=' ')
+    print()
 
     os.system('pause')
