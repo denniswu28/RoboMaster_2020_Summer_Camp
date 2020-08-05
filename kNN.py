@@ -19,7 +19,7 @@ class KNNClassify():
         return self
 
     def predict_y(self, X_test):
-        X_test[X_test > 0] = 1  # 转化为二进制
+        # X_test[X_test > 0] = 1  # 转化为二进制
         m = self._X_train.shape[0]
         y_pre = []
         for intX in X_test:
@@ -39,7 +39,8 @@ class KNNClassify():
 
             sorted_class_count = sorted(class_count.items(), key=operator.itemgetter(1), reverse=True)
             y_pre.append((sorted_class_count[0][0]))
-        return (np.array(y_pre))
+
+        return np.array(y_pre)
 
     def score(self, y_pre, y_test):
 

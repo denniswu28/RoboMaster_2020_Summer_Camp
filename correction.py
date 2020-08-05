@@ -20,8 +20,8 @@ def get_number_and_correct(raw_predict, color_list):
     #     assert raw_predict[i][p] > 0.998
 
     counts = get_counts(raw_ans, color_list)
-    # print('statistics before correction')
-    # print(counts)
+    print('statistics before correction')
+    print(counts)
 
     # we want a pair of odd numbers with the same color
     # of which one is only one, while the other has multiple ones
@@ -43,6 +43,6 @@ def get_number_and_correct(raw_predict, color_list):
                     raw_ans[i] = multi_odd
 
     counts = get_counts(raw_ans, color_list)
-    # print('statistics after correction')
-    # print(counts)
+    print('statistics after correction')
+    print(counts)
     return raw_ans

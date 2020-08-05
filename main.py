@@ -9,7 +9,7 @@ import identify_num
 import image_process_cv
 
 if __name__ == '__main__':
-    print(sys.path)
+    # print(sys.path)
     ag = auto_grader()
 
     images = image_process_cv.get_images()
