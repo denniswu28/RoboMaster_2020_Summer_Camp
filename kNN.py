@@ -5,7 +5,7 @@ import numpy as np
 
 class KNNClassify():
 
-    def __init__(self, k=1, p=2):
+    def __init__(self, k=3, p=2):
 
         self.k = k
         self.p = p

@@ -30,21 +30,25 @@ if __name__ == '__main__':
     # color_dict = ['R', 'G', 'B']
     color_dict = [Fore.RED, Fore.GREEN, Fore.BLUE]
     ans_list = [numbers[i] + 10 * (colors[i] + 1) for i in range(64)]
-
+    color_dict = ['R', 'G', 'B']
     # print("----------")
     # for each in raw_predict:
     #     print(each, end=' ')
     # for each in O0OO000OOO0O0O000:
     #     print(each[1], end=' ')
-    # for i in range(8):
-    #     for j in range(8):
-    #         # print(str(numbers[i * 8 + j]) + color_dict[colors[i * 8 + j]], end=', ')
-    #         print(color_dict[colors[i * 8 + j]], numbers[i * 8 + j], end=' ')
-    #     print()
+    for i in range(8):
+        for j in range(8):
+            print(str(numbers[i * 8 + j]) + str(color_dict[colors[i * 8 + j]]), end=' ')
+            # print(color_dict[colors[i * 8 + j]], numbers[i * 8 + j], end=' ')
+        print()
     # print(Style.RESET_ALL)
     # print('Below is for other programs')
-    for x in ans_list:
-        print(x, end=' ')
-    print()
+    # num = 0
+    # for x in ans_list:
+    #     num+=1
+    #     print(x, end=' ')
+    #     if (num%8 == 0) :
+    #         print("\n")
+    # print()
 
     os.system('pause')

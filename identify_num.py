@@ -1,7 +1,6 @@
 import numpy as np
 import sys
 import read_picture
-from sklearn.model_selection import train_test_split
 import kNN
 from keras.datasets import mnist
 
