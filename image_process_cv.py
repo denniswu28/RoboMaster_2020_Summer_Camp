@@ -5,7 +5,7 @@ import numpy as np
 def get_images():
     images = []
     for i in range(64):
-        img = cv2.imread('C:\\Users\\HP\\PycharmProjects\\my_code\\auto_grader\\image\\%d.png' % i)
+        img = cv2.imread('../my_code/auto_grader/image/%d.png' % i)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         images.append(img)
     return np.array(images)
